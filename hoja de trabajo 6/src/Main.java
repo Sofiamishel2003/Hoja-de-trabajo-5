@@ -30,6 +30,8 @@ public class Main {
             inventario.agregar_producto(key,value);
         } //ya está el mapa del archivo
         int j=0;
+        Map mapa_usuario=  factory.make_map(e);
+        productos inventario2=new productos(mapa_usuario);
         while (j!=7)
         {
             System.out.println("Escoge una opcion\n 1.Agregar producto\n 2.Buscar la categoria del producto\n 3.Mostrar los datos del producto\n 4.Mostrar los datos del producto en orden\n 5.Mostrar la categoria y producto de todo el inventario\n 6.Mostrar el la categoria y producto de todo\n 7.Salir");
@@ -42,7 +44,7 @@ public class Main {
                     value=in.nextLine();
                     System.out.println(" Ingrese el nombre de la categoria");
                     key=in.nextLine();
-                    inventario.agregar_producto(key,value);
+                    inventario2.agregar_producto(key,value);
                     break;
                 case 2:
                     System.out.println("Vamos a buscar la categoria de producto deseado-----------\n Ingrese el nombre del producto");
@@ -51,10 +53,10 @@ public class Main {
                     System.out.println(inventario.buscar_categoria(value));
                     break;
                 case 3:
-                    System.out.println(inventario.cantidad());
+                    System.out.println(inventario2.cantidad());
                     break;
                 case 4:
-                    System.out.println(inventario.cantidad());
+                    System.out.println(inventario2.cantidad());
                     break;
                 case 5:
                     System.out.println(inventario.mostrar());
