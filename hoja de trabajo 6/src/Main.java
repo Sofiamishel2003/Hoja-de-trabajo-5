@@ -70,10 +70,5 @@ public class Main {
             }
         }
 
-        System.out.println("Ingrese el producto a buscar");
-        String producto=in.nextLine();
-        producto=in.nextLine();
-        System.out.println(inventario.buscar_categoria(producto));
-
     }
 }
